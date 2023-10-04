@@ -1,0 +1,13 @@
+{
+	"name": "@sof-template-backend/replace-placeholders",
+	"version": "1.0.0",
+	"description": "Script for replacing the placeholders.",
+	"scripts": {
+		"start": "npx --yes tsx runReplacePlaceholders.ts"
+	},
+	"type": "module",
+	"license": "ISC",
+	"dependencies": {
+		"@hub335/sof-replace-placeholders-util": "^1.0.1"
+	}
+}

@@ -1,0 +1,9 @@
+site_name: TEMPLATE_COMPONENT_NAME
+site_description: TEMPLATE_COMPONENT_DESCRIPTION
+repo_url: https://github.com/hub335/sof-template-backend
+nav:
+  - "Introduction": "index.md"
+  - "Project Overview": "ProjectOverview.md"
+  - "Logging, Metrics & Alerts": "LoggingAndMetrics.md"
+  - "Local Development": "LocalDevelopment.md"
+  - "Configure environment": "ConfigureEnv.md"

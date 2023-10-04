@@ -1,0 +1,18 @@
+{
+  "name": "@sof-template-backend/functions",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "sst bind vitest",
+    "typecheck": "tsc -noEmit"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.119",
+    "@types/node": "^20.5.9",
+    "sst": "2.24.25",
+    "vitest": "^0.34.3"
+  },
+  "dependencies": {
+    "@hub335/sof-be-util": "^1.8.0"
+  }
+}

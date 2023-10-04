@@ -1,0 +1,20 @@
+# This CI/CD workflow does the following:
+# - builds the project
+# - removes deployed stacks from stage pr-{github.event.pull_request.number}
+
+name: Cleanup stacks for closed pull requests
+
+on:
+  pull_request:
+    branches:
+      - master
+    types: [closed]
+
+jobs:
+  cleanup:
+    uses: hub335/sof-workflows/.github/workflows/sst-remove.yml@master
+    with:
+      # A unique stage name for test deployment that includes the pull request number
+      stage: ${{ format('pr-{0}', github.event.pull_request.number) }}
+      environment: test
+    secrets: inherit

@@ -1,0 +1,28 @@
+# This CI/CD workflow does the following:
+# - builds the project
+# - deploys stacks
+# - runs unit and integration tests
+
+name: Deploy on release and from the solution repo
+
+# add id to identify the workflow run so the solution deployment can wait for it to finish
+run-name: "Deploying to ${{ github.event.client_payload.environment || (github.event.release.prerelease && 'qa') || 'prod' }} with ID ${{ github.event.client_payload.dispatchRunId }}"
+
+on:
+  # triggers on release on GitHub
+  release:
+    types:
+      - published
+      - edited
+  # triggers on solution deployment from the solution repo
+  repository_dispatch:
+    types:
+      - deploy-solution
+
+jobs:
+  deploy:
+    uses: hub335/sof-workflows/.github/workflows/sst-deploy.yml@master
+    with:
+      # use whatever environment from the solution repo event, or qa for pre-release, or prod for release
+      environment: ${{ github.event.client_payload.environment || (github.event.release.prerelease && 'qa') || 'prod' }}
+    secrets: inherit

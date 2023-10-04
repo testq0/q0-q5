@@ -1,0 +1,21 @@
+# This CI/CD workflow does the following:
+# - builds the project
+# - deploys stacks
+# - runs unit and integration tests
+
+name: Deploy head of master and run tests on test environment
+
+on:
+  push:
+    branches:
+      - master
+  # manual trigger
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    if: ${{ github.event.head_commit.message != 'Initial commit' }} # skip the initial commit which is created when forking from a template repo, since the repo environments is not created yet.
+    uses: hub335/sof-workflows/.github/workflows/sst-deploy.yml@master
+    with:
+      environment: test
+    secrets: inherit

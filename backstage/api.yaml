@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: sof-example-api
+  description: An example API
+# spec:
+#   type: openapi
+#   lifecycle: production
+#   owner: group:sof-team
+#   system: system:sof
+#   definition:
+#     $text: https://github.com/hub335/sof-authentication-client/blob/master/api/api.yml

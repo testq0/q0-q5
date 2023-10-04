@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: TEMPLATE_PREFIXED_COMPONENT_NAME
+  description: TEMPLATE_COMPONENT_DESCRIPTION
+spec:
+  targets:
+    - ./backstage/api.yaml
+    - ./backstage/resource.yaml
+    - ./backstage/service.yaml

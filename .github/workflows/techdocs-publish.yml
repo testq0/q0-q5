@@ -1,0 +1,23 @@
+# This workflow publishes mkdocs to an S3 bucket used by Backstage when
+# changes to the docs folder are pushed to master.
+
+name: Techdocs - Publish Docs for Backstage
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "docs/**"
+      - "backstage/**"
+      - "catalog-info.yaml"
+      - "mkdocs.yml"
+  workflow_dispatch: # Trigger manually on github.com
+
+jobs:
+  deploy:
+    uses: hub335/sof-workflows/.github/workflows/techdocs-publish.yml@master
+    secrets:
+      backstageDocsStorage: ${{ secrets.BACKSTAGE_DOCS_STORAGE }}
+      s3EnvAccessKeyId: ${{ secrets.AWS_SANDBOX_ACCESS_KEY_ID }}
+      s3EnvSecretAccessKey: ${{ secrets.AWS_SANDBOX_SECRET_ACCESS_KEY }}

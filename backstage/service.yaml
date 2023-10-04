@@ -1,0 +1,31 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: TEMPLATE_PREFIXED_COMPONENT_NAME
+  description: TEMPLATE_COMPONENT_DESCRIPTION
+  annotations:
+    github.com/project-slug: TEMPLATE_BACKSTAGE_PROJECT_SLUG
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/source-location: TEMPLATE_BACKSTAGE_SOURCE_LOCATION
+  tags:
+    - backend
+    - sof
+    - typescript
+    - serverless
+  links:
+    - url: https://vgcs-confluence.it.volvo.net/display/IL/Organization+Repository
+      title: Requirements
+      icon: article
+      type: admin-dashboard
+    - url: https://vgcs-confluence.it.volvo.net/display/IL/Organization+Repo+-+Component
+      title: Design
+      icon: article
+      type: admin-dashboard
+spec:
+  type: service
+  owner: group:sof-team
+  lifecycle: production
+  system: system:sof
+  dependsOn: []
+  providesApis:
+    - sof-example-api

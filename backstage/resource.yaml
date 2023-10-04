@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: ##COMPONENT_NAME##
+  description: An example stack
+# spec:
+#   type: database
+#   owner: group:sof-team
+#   system: system:sof
+#   dependencyOf: ["component:sof-authentication"]

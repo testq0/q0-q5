@@ -1,0 +1,47 @@
+{
+	"name": "sof-template-backend",
+	"version": "0.0.1",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "sst dev",
+		"build": "sst build",
+		"deploy": "sst deploy",
+		"remove": "sst remove",
+		"console": "sst console",
+		"update-sst": "sst update && npm install",
+		"typecheck": "tsc -p tsconfig.eslint.json",
+		"test": "sst bind \"vitest run --no-threads\"",
+		"test:local": "cross-env HTTP_PROXY='' HTTPS_PROXY='' sst bind \"vitest run\"",
+		"test:watch:local": "cross-env HTTP_PROXY='' HTTPS_PROXY='' sst bind vitest",
+		"unit": "vitest run unit --no-threads",
+		"unit:watch": "vitest unit",
+		"lint:fix": "npx eslint . --fix",
+		"prepare": "npx --yes husky install"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^17.7.1",
+		"@commitlint/config-conventional": "^17.7.0",
+		"@hub335/sof-sst-constructs": "^1.3.0",
+		"@types/node": "^20.5.9",
+		"@typescript-eslint/eslint-plugin": "^5.60.0",
+		"@typescript-eslint/parser": "^5.60.0",
+		"aws-cdk-lib": "2.91.0",
+		"cdk-nag": "^2.27.123",
+		"constructs": "10.2.69",
+		"cross-env": "^7.0.3",
+		"eslint": "^8.43.0",
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"husky": "^8.0.3",
+		"prettier": "2.8.8",
+		"sst": "2.24.25",
+		"typescript": "^5.2.2",
+		"vite-tsconfig-paths": "^4.2.0",
+		"vitest": "^0.34.3"
+	},
+	"workspaces": [
+		"packages/*",
+		"scripts/*"
+	]
+}

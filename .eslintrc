@@ -1,0 +1,48 @@
+{
+	"root": true,
+	"env": {
+		"es2021": true,
+		"node": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:@typescript-eslint/recommended-requiring-type-checking",
+		"plugin:@typescript-eslint/strict",
+		"prettier"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"project": "./tsconfig.eslint.json"
+	},
+	"plugins": ["@typescript-eslint", "prettier"],
+	"ignorePatterns": [".js", ".d.ts", "node_modules/", ".generated.ts"],
+	"rules": {
+		"object-shorthand": "off",
+		"@typescript-eslint/no-inferrable-types": "off",
+		"@typescript-eslint/restrict-template-expressions": "off",
+		"@typescript-eslint/no-unused-vars": "off",
+		"@typescript-eslint/no-unused-params": "off",
+		"@typescript-eslint/no-unsafe-member-access": "off",
+		"@typescript-eslint/no-unsafe-return": "off",
+		"@typescript-eslint/no-unsafe-assignment": "off",
+		"@typescript-eslint/no-unsafe-call": "off",
+		"@typescript-eslint/explicit-function-return-type": "error"
+	},
+	"overrides": [
+		{
+			"files": ["packages/*/test/**/*.ts", "packages/*/scripts/**/*.ts"],
+			"env": { "node": true },
+			"rules": {
+				"require-await": "off",
+				"no-useless-escape": "off",
+				"@typescript-eslint/require-await": "off",
+				"@typescript-eslint/no-unsafe-call": "off",
+				"@typescript-eslint/no-var-requires": "off",
+				"@typescript-eslint/no-non-null-assertion": "off",
+				"@typescript-eslint/ban-ts-comment": "off",
+				"@typescript-eslint/no-floating-promises": "off"
+			}
+		}
+	]
+}
