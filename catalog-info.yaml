@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
-  name: TEMPLATE_PREFIXED_COMPONENT_NAME
-  description: TEMPLATE_COMPONENT_DESCRIPTION
+  name: q0-q5
+  description: A backend component for q0 solution.
 spec:
   targets:
     - ./backstage/api.yaml

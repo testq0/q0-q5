@@ -1,6 +1,6 @@
-site_name: TEMPLATE_COMPONENT_NAME
-site_description: TEMPLATE_COMPONENT_DESCRIPTION
-repo_url: https://github.com/hub335/sof-template-backend
+site_name: q0-q5
+site_description: A backend component for q0 solution.
+repo_url: https://github.com/hub335/q0-q5
 nav:
   - "Introduction": "index.md"
   - "Project Overview": "ProjectOverview.md"

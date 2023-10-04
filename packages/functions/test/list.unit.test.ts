@@ -1,7 +1,7 @@
 import { describe, it, expect, vi } from "vitest";
 import { APIGatewayProxyEventV2, Context } from "aws-lambda";
-import * as todo from "@sof-template-backend/core/todo";
-import { TodoItem } from "@sof-template-backend/core/todo";
+import * as todo from "@q0-q5/core/todo";
+import { TodoItem } from "@q0-q5/core/todo";
 import { handler } from "../src/todo/list";
 
 describe("list todos lambda", () => {

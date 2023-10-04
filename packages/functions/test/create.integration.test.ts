@@ -1,7 +1,7 @@
 import { expect, it } from "vitest";
 import { Api } from "sst/node/api";
 import { Sigv4Client } from "@hub335/sof-be-util";
-import { TodoItem } from "@sof-template-backend/core/todo";
+import { TodoItem } from "@q0-q5/core/todo";
 
 const client = new Sigv4Client("eu-west-1");
 

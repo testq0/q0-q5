@@ -1,12 +1,12 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: TEMPLATE_PREFIXED_COMPONENT_NAME
-  description: TEMPLATE_COMPONENT_DESCRIPTION
+  name: q0-q5
+  description: A backend component for q0 solution.
   annotations:
-    github.com/project-slug: TEMPLATE_BACKSTAGE_PROJECT_SLUG
+    github.com/project-slug: testq0/q0-q5
     backstage.io/techdocs-ref: dir:.
-    backstage.io/source-location: TEMPLATE_BACKSTAGE_SOURCE_LOCATION
+    backstage.io/source-location: url:https://github.com/testq0/q0-q5
   tags:
     - backend
     - sof

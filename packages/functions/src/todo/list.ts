@@ -1,6 +1,6 @@
 import { APIGatewayEvent, APIGatewayProxyResultV2 } from "aws-lambda";
 import { apiBaseHandler, logger } from "@hub335/sof-be-util";
-import { list } from "@sof-template-backend/core/todo";
+import { list } from "@q0-q5/core/todo";
 
 const main = async (event: APIGatewayEvent): Promise<APIGatewayProxyResultV2> => {
 	logger.debug("List TODOs event", { event });

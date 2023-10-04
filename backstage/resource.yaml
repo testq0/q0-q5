@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Resource
 metadata:
-  name: ##COMPONENT_NAME##
+  name: q0-q5
   description: An example stack
 # spec:
 #   type: database

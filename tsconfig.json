@@ -15,7 +15,7 @@
 		"noUnusedParameters": true,
 		"skipLibCheck": true,
 		"paths": {
-			"@sof-template-backend/core/*": ["./packages/core/src/*"]
+			"@q0-q5/core/*": ["./packages/core/src/*"]
 		}
 	}
 }
